@@ -11,18 +11,15 @@ with open(election_csv, 'r') as csv_file:
 
     # Read the header row first
     csv_header = next(csv_file)
-    # print(f"Header: {csv_header}")
 
     # Set initial values
     total_votes = 0
 
     # Dictionary or list to store date
-    # unique_candidate = set()
     candidate_counts = {}
 
     # Read through each row of data after the header
     for row in csv_reader:
-        # print(row)
 
         # Count the total number of votes cast
         total_votes += 1
@@ -42,10 +39,14 @@ print("Election Results")
 print("-------------------------")
 print(f"Total Votes: {total_votes}")
 print("-------------------------")
+
+# Print a list of cendidates and their votes
 for candidate, count in candidate_counts.items():
     percentage = (count / total_votes) * 100
     print(f"{candidate}: {percentage:.3f}% ({count})")
 print("-------------------------")
+
+# Print winner
 print(f"Winner: {winner}")
 
 # Set variable for output file

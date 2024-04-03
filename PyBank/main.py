@@ -11,7 +11,6 @@ with open(budget_csv, 'r') as csv_file:
 
     # Read the header row first
     csv_header = next(csv_file)
-    # print(f"Header: {csv_header}")
 
     # Set initial values
     total_month = 0
@@ -24,7 +23,6 @@ with open(budget_csv, 'r') as csv_file:
     
     # Read through each row of data after the header
     for row in csv_reader:
-        # print(row)
 
         # Count the number of data rows
         total_month += 1
