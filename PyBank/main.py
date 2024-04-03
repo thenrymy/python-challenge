@@ -13,7 +13,7 @@ with open(budget_csv, 'r') as csv_file:
     csv_header = next(csv_file)
     # print(f"Header: {csv_header}")
 
-    # Read through each row of data after the header
+    # Set initial values
     total_month = 0
     total = 0
 
@@ -22,6 +22,7 @@ with open(budget_csv, 'r') as csv_file:
     value_change = []
     date = []
     
+    # Read through each row of data after the header
     for row in csv_reader:
         # print(row)
 
